@@ -1,6 +1,6 @@
 # Simple(But slow) Dijkstra Algorithm
 # Python
-# Time Complexity : O(V^2) (V is # of Vertices)
+# Time Complexity : O(V^2) ('V' is # of Vertices)
 
 
 import sys
