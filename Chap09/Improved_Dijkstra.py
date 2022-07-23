@@ -1,18 +1,16 @@
 import heapq
 import sys
-
 input = sys.stdin.readline
 INF = int(1e9)
 
-n, m = map(int, input().split())
+num_of_nodes, num_of_edges = map(int, input().split())
 
-start = int(input())
+start_node = int(input())
 
-graph = [[] for _ in range(n + 1)]
+graph = [[] for _ in range(num_of_nodes + 1)]
+distance = [INF] * (num_of_nodes + 1)
 
-distance = [INF] * (n + 1)
-
-for _ in range(m):
+for _ in range(num_of_edges):
     a, b, c = map(int, input().split())
 
     graph[a].append((b, c))
@@ -35,9 +33,9 @@ def dijkstra(start):
                 distance[next_dest] = cost
                 heapq.heappush(q, (cost, next_dest))
 
-dijkstra(start)
+dijkstra(start_node)
 
-for i in range(1, n + 1):
+for i in range(1, num_of_nodes + 1):
     if distance[i] == INF:
         print("INFINITY")
     else:
