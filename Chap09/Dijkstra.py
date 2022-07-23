@@ -58,9 +58,7 @@ def dijkstra(start):
                 distance[dest] = cost
 
 
-
 dijkstra(start_node)
-
 
 # print shortest distance for each node
 for i in range(1, num_of_nodes + 1):
